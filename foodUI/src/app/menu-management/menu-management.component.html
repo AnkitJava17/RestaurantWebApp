@@ -1,0 +1,57 @@
+<!-- Display food menus -->
+<div></div>
+<div class="menu">
+  <main>
+    <hr />
+    <section>
+      <h2>Today's Menu</h2>
+      <div *ngIf="foodMenus">
+        <div *ngFor="let foodMenu of foodMenus">
+          <table>
+            <tr>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr>
+              <td>
+                <p>{{ foodMenu.name }}</p>
+                <p style="font-size: 14px">{{ foodMenu.description }}</p>
+              </td>
+              <td>
+                <div class="del">
+                  <button (click)="deleteFoodMenu(foodMenu)">Delete</button>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Form to create a new food menu -->
+  <h3>Add New Item</h3>
+  <form class="form" [formGroup]="menuForm" (ngSubmit)="createFoodMenu()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter name</mat-label>
+      <input matInput type="name" placeholder="name" formControlName="name" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter description</mat-label>
+      <input
+        matInput
+        type="description"
+        placeholder="description"
+        formControlName="description"
+      />
+    </mat-form-field>
+    <button type="submit">Add</button>
+  </form>
+  <hr class="bottom-line" />
+  <hr />
+  <footer>
+    <p>
+      <a href="https://www.ncs.co/en-in/" target="_blank">Visit our website</a>
+    </p>
+    <p class="address">NCS India (IDC)</p>
+  </footer>
+</div>

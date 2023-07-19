@@ -2,11 +2,50 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TablesApplication",
+            "request": "launch",
+            "mainClass": "com.reserve.tables.TablesApplication"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-FoodManagementApplication<foodManagement>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "com.buddy.foodManagement.FoodManagementApplication",
             "projectName": "foodManagement",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=64950 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=foodManagement"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-AuthApplication<auth>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.mock.auth.AuthApplication",
+            "projectName": "auth",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=64948 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=auth"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-UserRegApplication<userReg>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.mock.userReg.UserRegApplication",
+            "projectName": "userReg",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=64954 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=userReg"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-TablesApplication<tables>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.reserve.tables.TablesApplication",
+            "projectName": "tables",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }

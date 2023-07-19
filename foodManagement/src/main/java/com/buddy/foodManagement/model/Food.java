@@ -20,15 +20,13 @@ public class Food {
 	@Id
     private String name;
     private String description;
-	private String photo;
 
 	public Food() {}
     
-	public Food( String name, String description, String photo) {
+	public Food( String name, String description) {
 		super();
 		this.name = name;
 		this.description = description;
-		this.photo = photo;
 	}
 	public String getName() {
 		return name;
@@ -42,11 +40,4 @@ public class Food {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getPhoto() {
-		return photo;
-	}
-	public void setPhoto(String photo) {
-		this.photo = photo;
-	}
-    
 }

@@ -1,0 +1,24 @@
+server:
+    port: 8090
+
+spring:
+    application:
+        name: user-service
+    datasource:
+        url: jdbc:mysql://localhost:3306/usersdb
+        username: root
+        password: Welcome@1
+
+
+    #Hibernate Configuration
+
+    jpa:
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
+                ddl-auto: create
+                naming: 
+                    physicals-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        show-sql: true
+        generate-ddl: true
+
