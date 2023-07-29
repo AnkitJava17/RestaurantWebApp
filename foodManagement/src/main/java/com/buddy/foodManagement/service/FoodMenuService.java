@@ -16,5 +16,4 @@ public interface FoodMenuService {
 
 	public boolean delete(String name);
     
-    
 }
