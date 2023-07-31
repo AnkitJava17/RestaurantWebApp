@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: food-app-deployment-v3
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: food-app-v3
+  template:
+    metadata:
+      labels:
+        app: food-app-v3
+    spec:
+      containers:
+      - name: food-app-v3
+        image: ankit31bora/food-app-v3:latest
+        ports:
+        - containerPort: 8082

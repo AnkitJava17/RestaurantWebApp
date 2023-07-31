@@ -19,7 +19,7 @@ import com.buddy.foodManagement.model.Food;
 import com.buddy.foodManagement.service.FoodMenuService;
 
 
-@CrossOrigin(origins ="http://localhost:4200" )
+// @CrossOrigin(origins ="http://localhost:4200" )
 @RestController
 @RequestMapping("/api/foodMenu")
 public class FoodMenuController {
